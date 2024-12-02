@@ -43,7 +43,7 @@ public class Main {
                 System.out.print("Selecione a Escola (1-3): ");
                 int escolaIndex = scanner.nextInt() - 1;
                 scanner.nextLine(); // Consumir quebra de linha
-                estudantes.add(new Estudante(nome, cpf, dataNascimento, email, matricula, turmaAno, escolas.get(escolaIndex)));
+                estudantes.add(new Estudante(nome, cpf, dataNascimento, email, matricula, turmaAno, null));
             }
             
             // Cadastro de 3 professores
@@ -69,16 +69,23 @@ public class Main {
             System.out.println("\nInformações dos Estudantes:");
             for (Estudante est : estudantes) {
                 System.out.println("Nome: " + est.getNome());
-                System.out.println("CPF: " + est.getCpf());
+                System.out.println("CPF: " + est.getClass());
                 System.out.println("Turma/Ano: " + est.getTurmaAno());
-                System.out.println("Escola Anterior: " + est.getEscolaAnterior().getNome());
             }
             
             System.out.println("\nInformações dos Professores:");
             for (Professor prof : professores) {
                 System.out.println("Nome: " + prof.getNome());
-                System.out.println("CPF: " + prof.getCpf());
+                System.out.println("CPF: " + prof.getClass());
                 System.out.println("SIAPE: " + prof.getSiape());
+            }
+
+            System.out.println("\nInformações das Escolas:");
+            for (Escola escola : escolas) {
+                System.out.println("ID MEC: " + escola.getIdMec());
+                System.out.println("Nome: " + escola.getNome());
+                System.out.println("Contato: " + escola.getContato());
+                System.out.println("Ano de Conclusão: " + escola.getAnoConclusao());
             }
         }
     }
