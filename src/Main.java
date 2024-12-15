@@ -8,8 +8,7 @@ public class Main {
             ArrayList<Professor> professores = new ArrayList<>();
             ArrayList<Escola> escolas = new ArrayList<>();
             
-            // Cadastro de 3 escolas
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < 4; i++) {
                 System.out.println("Cadastro da Escola " + (i + 1));
                 System.out.print("ID MEC: ");
                 String idMec = scanner.nextLine();
@@ -25,8 +24,8 @@ public class Main {
                 escolas.add(new Escola(idMec, nome, endereco, contato, anoConclusao));
             }
             
-            // Cadastro de 3 estudantes
-            for (int i = 0; i < 3; i++) {
+            
+            for (int i = 0; i < 4; i++) {
                 System.out.println("Cadastro do Estudante " + (i + 1));
                 System.out.print("Nome: ");
                 String nome = scanner.nextLine();
@@ -40,14 +39,14 @@ public class Main {
                 String matricula = scanner.nextLine();
                 System.out.print("Turma/Ano: ");
                 String turmaAno = scanner.nextLine();
-                System.out.print("Selecione a Escola (1-3): ");
+                System.out.print("Selecione a Escola (1-4): ");
                 int escolaIndex = scanner.nextInt() - 1;
                 scanner.nextLine(); // Consumir quebra de linha
                 estudantes.add(new Estudante(nome, cpf, dataNascimento, email, matricula, turmaAno, null));
             }
             
-            // Cadastro de 3 professores
-            for (int i = 0; i < 3; i++) {
+           
+            for (int i = 0; i < 4; i++) {
                 System.out.println("Cadastro do Professor " + (i + 1));
                 System.out.print("Nome: ");
                 String nome = scanner.nextLine();
